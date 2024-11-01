@@ -1,0 +1,24 @@
+name: deploying
+
+on:
+  push:
+    branches:
+      - master
+      
+jobs:
+  deploy:
+    name: setting up
+    runs-on: debian-latest
+    steps:
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: SSH into Server and Deploy
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+          "cd ${{ secrets.WORK_DIR }} && \
+          git fetch origin master && \
+          git reset --hard origin/master && \
+          ./scripts/deploy.sh"
