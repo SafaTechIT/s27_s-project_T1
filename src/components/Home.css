@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background-color: #1da1f2;
+    /* رنگ پس‌زمینه هدر */
+    color: white;
+    /* رنگ متن */
+    padding: 15px;
+    /* فاصله داخلی */
+    display: flex;
+    /* استفاده از فلکس برای چینش */
+    align-items: center;
+    /* مرکز قرار دادن عمودی */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* سایه برای عمق بیشتر */
+}
+
+.header-container {
+    display: flex;
+    /* استفاده از فلکس برای لوگو و عنوان */
+    align-items: center;
+    /* مرکز قرار دادن عمودی */
+}
+
+.logo {
+    background-color: white;
+    /* رنگ پس‌زمینه لوگو */
+    color: #1da1f2;
+    /* رنگ متن لوگو */
+    font-size: 28px;
+    /* اندازه فونت لوگو */
+    font-weight: bold;
+    /* ضخامت فونت */
+    width: 50px;
+    /* عرض لوگو */
+    height: 50px;
+    /* ارتفاع لوگو */
+    border-radius: 50%;
+    /* گرد کردن گوشه‌ها */
+    display: flex;
+    /* استفاده از فلکس برای مرکز قرار دادن متن */
+    justify-content: center;
+    /* مرکز قرار دادن افقی */
+    align-items: center;
+    /* مرکز قرار دادن عمودی */
+    margin-right: 15px;
+    /* فاصله بین لوگو و عنوان */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* سایه برای لوگو */
+}
+
+.header-title {
+    font-size: 24px;
+    /* اندازه فونت عنوان */
+    font-weight: bold;
+    /* ضخامت فونت */
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+
+    width: 200px;
+    background-color: #ffffff;
+    border-right: 1px solid #e1e8ed;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    /* عرض سایدبار */
+    background-color: #ffffff;
+    /* رنگ پس‌زمینه سایدبار */
+    border-right: 1px solid #e1e8ed;
+    /* خط جداساز */
+    padding: 20px;
+    /* فاصله داخلی */
+    display: flex;
+    /* استفاده از فلکس برای چینش */
+    flex-direction: column;
+    /* چینش عمودی */
+    height: 100vh;
+    /* ارتفاع سایدبار به اندازه کل صفحه */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* سایه برای عمق بیشتر */
+}
+
+.logo-container {
+    display: flex;
+    /* استفاده از فلکس برای لوگو و نام */
+    align-items: center;
+    /* مرکز قرار دادن عمودی */
+    margin-bottom: 30px;
+    /* فاصله از لیست */
+}
+
+.logo {
+    background-color: #1da1f2;
+    /* رنگ پس‌زمینه لوگو */
+    color: white;
+    /* رنگ متن لوگو */
+    font-size: 24px;
+    /* اندازه فونت لوگو */
+    font-weight: bold;
+    /* ضخامت فونت */
+    width: 50px;
+    /* عرض لوگو */
+    height: 50px;
+    /* ارتفاع لوگو */
+    border-radius: 50%;
+    /* گرد کردن گوشه‌ها */
+    display: flex;
+    /* استفاده از فلکس برای مرکز قرار دادن متن */
+    justify-content: center;
+    /* مرکز قرار دادن افقی */
+    align-items: center;
+    /* مرکز قرار دادن عمودی */
+    margin-right: 15px;
+    /* فاصله بین لوگو و نام */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* سایه برای لوگو */
+}
+
+.logo-text {
+    font-size: 20px;
+    /* اندازه فونت نام */
+    font-weight: bold;
+    /* ضخامت فونت */
+    color: #333;
+    /* رنگ متن نام */
+}
+
+ul {
+    list-style-type: none;
+    /* حذف نقاط لیست */
+    padding: 0;
+    /* حذف فاصله داخلی */
+}
+
+li {
+    margin: 15px 0;
+    /* فاصله بین آیتم‌های لیست */
+    transition: background-color 0.3s;
+    /* تغییر رنگ پس‌زمینه با افکت */
+    text-align: center;
+}
+
+li:hover {
+    background-color: #f0f8ff;
+    /* رنگ پس‌زمینه هنگام هاور */
+    border-radius: 5px;
+    /* گرد کردن گوشه‌ها هنگام هاور */
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    /* حذف خط زیر لینک */
+    color: #333;
+    /* رنگ لینک */
+    font-size: 16px;
+    /* اندازه فونت لینک */
+    display: block;
+    /* نمایش بلوکی برای لینک */
+    padding: 10px;
+    /* فاصله داخلی لینک */
+}
+
+a:hover {
+    color: #1da1f2;
+    /* تغییر رنگ لینک هنگام هاور */
+}
+
+.main-feed {
+    flex: 1;
+    padding: 20px;
+    text-align: right;
+}
+
+.tweet-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.tweet-input textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.tweet-input button {
+    padding: 10px;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tweet-input button:hover {
+    background-color: #0d8dd6;
+}
+
+.tweet-list {
+    margin-top: 20px;
+}
+
+.tweet {
+    background-color: white;
+    border: 1px solid #e1e8ed;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
