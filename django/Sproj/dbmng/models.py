@@ -1,10 +1,14 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 # Create your models here.
-class users(AbstractUser):
+class users(models.Model):
+    name=models.CharField(max_length=50)
+    bio=models.TextField(blank=True)
+    uid=models.CharField(max_length=50)
+    pasw=models.CharField(max_length=50)
+    logindate=models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='images/', blank=True)
 class tags(models.Model):
-    name = models.CharField(max_length=50)
+    tagname = models.CharField(max_length=50)
     def __str__(self):
         return self.name
 class post (models.Model):
@@ -33,8 +37,8 @@ class reply(models.Model):
     def __str__(self):
         return self.content
 class massage(models.Model):
-    sender = models.ForeignKey(users, on_delete=models.CASCADE)
-    receiver = models.ForeignKey(users, on_delete=models.CASCADE)
+    sender = models.ForeignKey(users, on_delete=models.CASCADE,related_name='sender')
+    receiver = models.ForeignKey(users, on_delete=models.CASCADE,related_name='receiver')
     image = models.ImageField(upload_to = 'images/', blank=True)
     content = models.TextField(blank=True)
     time = models.DateTimeField(auto_now_add=True)
